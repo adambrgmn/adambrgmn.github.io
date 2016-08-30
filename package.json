@@ -4,14 +4,21 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "build:stats": "webpack --profile --json > stats.json",
+    "publish": "./bin/publish.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adambrgmn/adambrgmn.github.io.git"
   },
   "keywords": [],
-  "author": "Adam Bergman",
+  "author": {
+    "name": "Adam Bergman",
+    "email": "adam@fransvilhelm.com",
+    "url": "http://fransvilhelm.com/"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/adambrgmn/adambrgmn.github.io/issues"
@@ -27,6 +34,9 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
+    "bluebird": "^3.4.3",
+    "cheerio": "^0.22.0",
+    "child-process-promise": "^2.1.3",
     "clean-webpack-plugin": "^0.1.10",
     "css-loader": "^0.24.0",
     "eslint": "^3.4.0",
@@ -40,9 +50,11 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "image-webpack-loader": "^2.0.0",
+    "inquirer": "^1.1.2",
     "isparta-loader": "^2.0.0",
     "json-loader": "^0.5.4",
     "node-sass": "^3.8.0",
+    "normalize.css": "^4.2.0",
     "postcss-loader": "^0.11.0",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.0",
@@ -54,5 +66,10 @@
     "webpack-dev-server": "^1.15.0",
     "webpack-merge": "^0.14.1",
     "webpack-validator": "^2.2.7"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
   }
 }

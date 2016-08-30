@@ -7,12 +7,12 @@ import * as parts from './webpack';
 const TARGET = process.env.npm_lifecycle_event;
 const ENABLE_POLLING = process.env.ENABLE_POLLING;
 const PATHS = {
-  app: join(__dirname, 'app'),
+  app: join(__dirname, 'src'),
   style: [
-    join(__dirname, 'app', 'main.scss'),
+    join(__dirname, 'src', 'main.scss'),
   ],
-  images: join(__dirname, 'app', 'images'),
-  favicon: join(__dirname, 'app'),
+  images: join(__dirname, 'src', 'images'),
+  favicon: join(__dirname, 'src'),
   build: join(__dirname, 'build'),
   test: join(__dirname, 'tests'),
 };
@@ -33,7 +33,10 @@ const common = merge(
       extensions: ['', '.js', '.jsx'],
     },
   },
-  parts.indexTemplate({ title: 'Sinion Game', appMountId: 'app' }),
+  parts.indexTemplate({
+    title: 'Adam Bergman | Web developer located in Gothenburg',
+    appMountId: 'app',
+  }),
   parts.loadJSX(PATHS.app),
   parts.loadFavicon(PATHS.favicon),
   parts.loadJson(PATHS.app),

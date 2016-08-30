@@ -9,7 +9,7 @@ export const indexTemplate = (options) => ({
     new HtmlWebpackPlugin({
       template: './webpack/template/index.ejs',
       title: options.title,
-      appMountId: options.appMountId,
+      // appMountId: options.appMountId,
       mobile: true,
       inject: false,
       googleFonts: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700',
@@ -148,7 +148,7 @@ export const setupCSS = (paths) => ({
         test: /\.(css|scss)$/,
         loaders: [
           'style',
-          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', // eslint-disable-line max-len
+          'css?sourceMap&modules&importLoaders=1&localIdentName=[local]', // eslint-disable-line max-len
           'postcss?sourceMap',
           'resolve-url',
           'sass?sourceMap',

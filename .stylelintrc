@@ -5,7 +5,7 @@
     "font-family-name-quotes": "always-unless-keyword",
     "function-url-quotes": "always",
     "selector-attribute-quotes": "always",
-    "string-quotes": "double",
+    "string-quotes": "single",
     "at-rule-no-vendor-prefix": true,
     "media-feature-name-no-vendor-prefix": true,
     "property-no-vendor-prefix": true,
