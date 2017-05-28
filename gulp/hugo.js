@@ -30,6 +30,7 @@ const constructArgs = (opts) => {
     buildDrafts: ['-D'],
     buildExpired: ['-E'],
     buildFuture: ['-F'],
+    baseUrl: ['-b', opts.baseUrl],
     dest: ['-d', path.resolve(opts.dest || 'dist')],
     src: ['-s', path.resolve(opts.src || '')],
   };

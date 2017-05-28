@@ -81,7 +81,9 @@ const cleanPostProd = () => del([
 const hugoDev = hugo({
   dest: PATHS.site.dest.DEV,
   src: PATHS.site.src,
+  baseUrl: 'http://localhost:3000/',
   buildDrafts: true,
+  buildFuture: true,
   noThrow: true,
 });
 
