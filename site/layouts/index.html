@@ -1,14 +1,7 @@
 {{ define "main" }}
-  <header class="header">
-    <h1 class="header__title">
-      <span class="underline">{{ .Site.Title }}</span>
-    </h1>
-    <h2 class="header__description">{{ .Site.Params.description }}</h2>
-    <p class="header__paragraph">
-      <a href="{{ .Site.Params.documentation }}">{{ .Site.Params.documentation }}</a>
-    </p>
-    <div class="img__container">
-      <img src="/assets/img/alex-holyoake-113856.jpg" aria-role="presentation" />
-    </div>
-  </header>
+  <section class="articles">
+    {{ range first 5 (where .Data.Pages.ByPublishDate "Section" "post") }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </section>
 {{ end }}

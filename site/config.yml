@@ -1,0 +1,9 @@
+languageCode: "en-us"
+title: "Adam Bergman | web developer"
+baseURL: "http://adambrgmn.github.io/"
+MetaDataFormat: "yaml"
+
+params:
+  description: "Technical writings about javascript, css, html and Hugo"
+  fonts:
+    - "Poppins:400,700"

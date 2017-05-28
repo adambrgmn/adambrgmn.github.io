@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ .Lang }}">
   <head>
-    <title>{{ block "title" . }}{{ .Site.Title }} &mdash; {{ .Site.Params.description }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ end }}</title>
     {{ partial "head" . }}
 
     {{ partial "critical-styles" . }}
@@ -9,8 +9,13 @@
   </head>
   <body>
     <div class="container">
-      {{ block "main" . }}
-      {{ end }}
+      <div class="container__sidebar">
+        Side content
+      </div>
+      <main class="container__main">
+        {{ block "main" . }}
+        {{ end }}
+      </main>
     </div>
 
     {{ if eq (getenv "NODE_ENV") "production" }}
