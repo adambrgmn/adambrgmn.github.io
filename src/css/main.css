@@ -11,5 +11,6 @@
  * them in your HTML via "/assets/css/[filename].css".
  */
 
-@import "./imports/_layout.css";
-@import "./imports/_header.css";
+body {
+  background: transparent;
+}
