@@ -1,0 +1,23 @@
+/**
+ * All css-files are post prcessed by postcss and cssnext.
+ * See http://cssnext.io/ for more information. But note
+ * that variables aren't processed and leaved as is. So
+ * if you like to support older browsers you might want to
+ * make postcss take care of them. Checkout README.md for
+ * more information.
+ *
+ * critical.css is used to inline critical css rules in
+ * the <head> of your webpage. Use it to make your webpage
+ * become visible faster.
+ *
+ * All other css-files are loaded async without blocking
+ * page load.
+ *
+ * "minireset.css" (http://jgthms.com/minireset.css/) is
+ * a small css-reset library included for your convinience.
+ * Remove it if you like (delete the @import-statement in
+ * this file and uninstall it with
+ * "yarn remove minirest.css").
+ */
+@import "minireset.css";
+@import "./imports/_variables.css";

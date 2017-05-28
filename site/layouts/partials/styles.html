@@ -1,0 +1,14 @@
+{{ with .Site.Params.fonts }}
+  {{ $fonts := (delimit . "|" | safeHTML) }}
+  <link rel="preload" href="https://fonts.googleapis.com/css?family={{ $fonts }}" as="style" onload="this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ $fonts }}" /></noscript>
+{{ end }}
+
+{{ $.Scratch.Set "main.css" "main.css" }}
+{{ if isset .Site.Data.hash "css" }}
+  {{ $.Scratch.Set "main.css" (index .Site.Data.hash.css "main.css") }}
+{{ end }}
+<link rel="preload" href="/assets/css/{{ $.Scratch.Get "main.css" }}" as="style" onload="this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/assets/css/{{ $.Scratch.Get "main.css" }}" /></noscript>
+
+<script>{{ readFile "layouts/partials/load-css.js" | safeJS }}</script>

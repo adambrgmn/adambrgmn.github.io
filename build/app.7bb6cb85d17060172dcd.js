@@ -1,2 +1,0 @@
-webpackJsonp([0,2],[function(n,i,e){"use strict";e(1),console.log("hello")},function(n,i){n.exports={container:"container",sectionContainer:"sectionContainer",headerContainer:"headerContainer",header:"header",subheader:"subheader",headerClapping:"headerClapping",clappingAnimation:"clappingAnimation",infoContainer:"infoContainer",infoHeader:"infoHeader",infoList:"infoList",infoListItem:"infoListItem",link:"link",taco:"taco",tacoAnimation:"tacoAnimation",infoUrl:"infoUrl"}}]);
-//# sourceMappingURL=app.7bb6cb85d17060172dcd.js.map

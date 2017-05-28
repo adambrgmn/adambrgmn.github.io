@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+{{- .Hugo.Generator -}}
+
+{{ with .Site.Social.facebook_app_id }}<meta property="fb:app_id" content="{{ . }}">{{ end }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}
+
+{{- with .Site.Params.google_verify_meta -}}
+  <meta name="google-site-verification" content="{{ . }}" />
+{{ end }}
+
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/favicon-230x230.png">
+
+<link rel="canonical" href="{{ .Permalink }}">

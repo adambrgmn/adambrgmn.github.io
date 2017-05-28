@@ -1,0 +1,15 @@
+/**
+ * All css-files are post prcessed by postcss and cssnext.
+ * See http://cssnext.io/ for more information. But note
+ * that variables aren't processed and leaved as is. So
+ * if you like to support older browsers you might want to
+ * make postcss take care of them. Checkout README.md for
+ * more information.
+ *
+ * Every .css-file inside "src/css" (except "critcal.css")
+ * will be post processed by postcss and you can reference
+ * them in your HTML via "/assets/css/[filename].css".
+ */
+
+@import "./imports/_layout.css";
+@import "./imports/_header.css";

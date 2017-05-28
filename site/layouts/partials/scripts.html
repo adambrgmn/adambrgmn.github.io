@@ -1,0 +1,5 @@
+{{ $.Scratch.Set "main.js" "main.js" }}
+{{ if isset .Site.Data.hash "js" }}
+  {{ $.Scratch.Set "main.js" (index .Site.Data.hash.js "main.js")}}
+{{ end }}
+<script src="/assets/js/{{ $.Scratch.Get "main.js" }}" async></script>

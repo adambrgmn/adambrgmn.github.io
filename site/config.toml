@@ -1,0 +1,8 @@
+languageCode = "en-us"
+title = "Frans Hugo"
+baseURL = "http://franshugo.com/"
+
+[params]
+  description = "A boilerplate for a modern site built with Hugo"
+  documentation = "https://github.com/adambrgmn/frans-hugo"
+  fonts = ["Poppins:400,700"]
