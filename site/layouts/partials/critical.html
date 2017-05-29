@@ -1,0 +1,14 @@
+{{ if eq (getenv "NODE_ENV") "production" }}
+  <style>
+    {{ $cssPath := index .Site.Data.hash.css "critical.css" | printf "%s/%s" "static/assets/css" | printf "%s" }}
+    {{ readFile $cssPath | safeCSS }}
+  </style>
+
+  <script>
+    {{ $jsPath := index .Site.Data.hash.js "manifest.js" | printf "%s/%s" "static/assets/js" | printf "%s" }}
+    {{ readFile $jsPath | safeJS }}
+  </script>
+{{ else }}
+  <link rel="stylesheet" type="text/css" href="/assets/css/critical.css" />
+  <script src="/assets/js/manifest.js"></script>
+{{ end }}

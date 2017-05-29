@@ -4,7 +4,7 @@
     <title>{{ block "title" . }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ end }}</title>
     {{ partial "head" . }}
 
-    {{ partial "critical-styles" . }}
+    {{ partial "critical" . }}
     {{ partial "styles" . }}
   </head>
   <body>
@@ -18,10 +18,10 @@
       </main>
     </div>
 
+    {{ partial "scripts" . }}
+
     {{ if eq (getenv "NODE_ENV") "production" }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
-
-    {{ partial "scripts" . }}
   </body>
 </html>
